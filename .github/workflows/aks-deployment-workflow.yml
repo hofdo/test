@@ -23,8 +23,10 @@ jobs:
       - uses: azure/docker-login@v1
         with:
           login-server: ${{ env.REGISTRY_NAME }}.azurecr.io
-          username: ${{ secrets.REGISTRY_USERNAME }}
-          password: ${{ secrets.REGISTRY_PASSWORD }}
+        #  username: ${{ secrets.REGISTRY_USERNAME }}
+          username: 00000000-0000-0000-0000-000000000000
+        #  password: ${{ secrets.REGISTRY_PASSWORD }}
+          password: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IldBQVE6RVNQRDpYVlhGOkJIRUw6S1laTzpPU1dTOkNMRDI6SUEzMjpYWUZaOjNSWlY6NEFTVzpIWDJCIn0.eyJqdGkiOiIwMTIxNjk2YS1jNjNlLTQxZDQtOTE0MC1jZDIxNWQwN2I1ZWIiLCJzdWIiOiJsaXZlLmNvbSNob2ZtYW5uLmRvbWluaXF1ZUBibHVld2luLmNoIiwibmJmIjoxNjU1OTY3ODc5LCJleHAiOjE2NTU5Nzk1NzksImlhdCI6MTY1NTk2Nzg3OSwiaXNzIjoiQXp1cmUgQ29udGFpbmVyIFJlZ2lzdHJ5IiwiYXVkIjoicmVnaXN0cnl6Y2FtcHJpdmFnZTIwMjIuYXp1cmVjci5pbyIsInZlcnNpb24iOiIxLjAiLCJyaWQiOiJlYWVmYzYyZjQzZGQ0NjYwODliMzYyMmYyNDlkZjk2ZSIsImdyYW50X3R5cGUiOiJyZWZyZXNoX3Rva2VuIiwiYXBwaWQiOiIwNGIwNzc5NS04ZGRiLTQ2MWEtYmJlZS0wMmY5ZTFiZjdiNDYiLCJ0ZW5hbnQiOiI0MWU2ZmI3ZC0xZDY0LTQwNjMtOTM4NS04NzQ2ZjkyYWE2YzQiLCJwZXJtaXNzaW9ucyI6eyJBY3Rpb25zIjpbInJlYWQiLCJ3cml0ZSIsImRlbGV0ZSJdLCJOb3RBY3Rpb25zIjpudWxsfSwicm9sZXMiOltdfQ.SZ4P3OdalONlqHd31X8M9xjFtXz23HIx2fysmtwQutUGI_qFpexvhwtF_A5IporigtQV8L0x2jxe2D-WGeVDxIPvRrDe3gc_NetfblL12QLX8oBc0pb8m-Hr3aeBxrBgyvNWP02H6KuLU9Bz_PQ-nCOrVONBLK367_JQpKiYyOtMc68zE7_vBpGt-OBivFyjMMq_xJqrlEzVbwx4lAXpqmSreYZFvLk1NWRAvKbiq3nV7CH_EAlat1KoDmU2M3d8SXNl5tyqTPM1KOZjbDWHkUWedM0wlHYqh9B7dQUukYJI1q-fECt3VIXy5Cv4Ntzn_NyH8NMeFNdlI3ji_0I-Gg
 
       # Container build and push to a Azure Container Registry (ACR)
       - run: |
